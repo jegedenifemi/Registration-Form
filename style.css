@@ -1,0 +1,150 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: url(img/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 7vw;
+  margin-top: 11vw;
+}
+
+/* L.H.S TEXT STYLING */
+.txt-cont {
+  width: 50%;
+}
+.txt-cont > h1 {
+  font-size: clamp(2.2rem, 1rem + 1vw, 4rem);
+  font-weight: 700;
+  max-width: 475px;
+  min-width: 347px;
+}
+.txt-cont > p {
+  font-size: clamp(0.4rem, 0.4rem + 1vw, 1rem);
+  max-width: 632px;
+  min-width: 347px;
+}
+
+/* FORM STYLING */
+.form-cont {
+  width: min(50%, 550px);
+}
+.form-cont > p {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  color: hsl(246, 25%, 77%);
+  background-color: hsl(248, 32%, 49%);
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0px 5px 1px hsla(249, 10%, 26%, 0.295);
+}
+.tryspan {
+  color: ghostwhite;
+}
+.tryspan,
+::placeholder {
+  font-weight: 600;
+}
+form {
+  background-color: white;
+  padding: 2vw;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 1px hsla(249, 10%, 26%, 0.295);
+  width: max(100%, 19rem);
+}
+form p {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: hsl(246, 25%, 77%);
+}
+form a {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+}
+input {
+  border-radius: 0.3rem;
+  outline: none;
+  border: 2px solid ghostwhite;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-weight: 600;
+}
+input:focus {
+  border: 2px solid hsl(246, 25%, 77%);
+}
+input:focus:invalid {
+  background-image: url(img/icon-error.svg);
+  border: 2px solid hsl(0, 100%, 74%);
+  padding-inline-end: 1rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-x: 95%;
+}
+input:valid {
+  border: 2px solid hsl(154, 59%, 51%);
+}
+[type="submit"] {
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  color: ghostwhite;
+  font-weight: 700;
+  box-shadow: 0px 2px 1px hsla(249, 10%, 26%, 0.603);
+}
+
+/* MEDIA QUERIES*/
+
+@media screen and (min-width: 676px) and (max-width: 820px) {
+  .container {
+    padding-inline: 0.5rem;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 675px) {
+  Body {
+    background-image: url(img/bg-intro-mobile.png);
+    padding-inline: 4vw;
+  }
+  .container {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    padding-inline: 0;
+  }
+  .txt-cont {
+    padding-inline: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .txt-cont h1 {
+    margin: 0 auto;
+  }
+  .txt-cont > p {
+    padding-inline: 1rem;
+    /* font-size: 1.1rem; */
+  }
+  .form-cont {
+    width: min(95%, 555px);
+    margin-top: 2rem;
+    padding-inline: 0;
+  }
+  .form-cont > p {
+    padding-inline: 6rem;
+  }
+}
+/* @media screen and (max-width: 480px) and (min-width: 375px)  { */
