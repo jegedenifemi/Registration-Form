@@ -28,8 +28,12 @@
         <form action="">
           <input type="text" placeholder="First Name" required name="fname" />
           <br />
+          <p class="error-msg">First Name cannot be empty</p>
+
           <input type="text" placeholder="Last Name" required name="lname" />
           <br />
+          <p class="error-msg">First Name cannot be empty</p>
+
           <input
             type="email"
             placeholder="Email Address"
@@ -37,6 +41,8 @@
             name="email"
           />
           <br />
+          <p class="error-msg">Looks like this is not an email</p>
+
           <input
             type="password"
             placeholder="Password"
@@ -45,6 +51,9 @@
             minlength="8"
           />
           <br />
+          <p class="error-msg">
+            Password cannot be empty (Minimum of 8 characters)
+          </p>
           <input type="submit" value="CLAIM YOUR FREE TRIAL" />
           <p>
             By clicking the button, you are agreeing to our
